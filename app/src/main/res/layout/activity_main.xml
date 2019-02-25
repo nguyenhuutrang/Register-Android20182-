@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/txtv_fn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:text="First Name"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/txtv_ln"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/etxt_fn"
+            android:text="Last Name"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etxt_fn"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:hint="First Name"
+            android:background="#d1caca"
+            android:layout_below="@+id/txtv_fn"
+            android:layout_marginStart="5dp" />
+
+        <EditText
+            android:id="@+id/etxt_ln"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:background="#d1caca"
+            android:hint="Last Name"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/etxt_fn"
+            android:layout_below="@+id/txtv_ln" />
+
+        <TextView
+            android:id="@+id/txtv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etxt_fn"
+            android:layout_alignLeft="@+id/etxt_fn"
+            android:layout_marginTop="10dp"
+            android:text="Gender"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtv_gender"
+            android:layout_marginLeft="100dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="25dp"
+                android:id="@+id/rBtn_male"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="25dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/rBtn_female"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txtv_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtv_gender"
+            android:layout_alignLeft="@+id/etxt_fn"
+            android:layout_marginTop="10dp"
+            android:text="BirthDay"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etxt_birthday"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:inputType="date"
+            android:textSize="20dp"
+            android:hint="Birthday"
+            android:background="#d1caca"
+            android:layout_below="@+id/txtv_birthday"
+            android:layout_marginStart="5dp" />
+
+        <Button
+            android:id="@+id/btn_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/etxt_birthday"
+            android:layout_alignBottom="@+id/etxt_birthday" />
+
+        <TextView
+            android:id="@+id/txtv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etxt_birthday"
+            android:layout_alignLeft="@+id/etxt_fn"
+            android:layout_marginTop="10dp"
+            android:text="Address"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etxt_address"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textSize="20dp"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:hint="Address"
+            android:minLines="2"
+            android:maxLines="4"
+            android:lines="2"
+            android:background="#d1caca"
+            android:layout_below="@+id/txtv_address"
+            android:layout_marginStart="5dp" />
+
+        <TextView
+            android:id="@+id/txtv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etxt_address"
+            android:layout_alignLeft="@+id/etxt_fn"
+            android:layout_marginTop="10dp"
+            android:text="Email"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etxt_email"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:hint="Email"
+            android:background="#d1caca"
+            android:layout_below="@+id/txtv_email"
+            android:layout_marginStart="5dp" />
+
+        <CheckBox
+            android:id="@+id/cBox_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I agree to Terms of Use"
+            android:layout_below="@+id/etxt_email"
+            android:layout_marginLeft="15dp"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/cBox_agree"
+            android:text="Register"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+
+
+</ScrollView>
